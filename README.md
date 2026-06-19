@@ -59,6 +59,23 @@ questionaire/
 * Voice-Based Mock Interviews
 * Performance Analytics
 
+## Live Demo
+
+🌐 Frontend:
+https://questionaire-tan-seven.vercel.app/
+
+⚙️ Backend API:
+https://questionaire-wclg.onrender.com
+
+## Features
+
+- AI-generated interview questions
+- Technical interview preparation
+- Behavioral interview preparation
+- HR interview preparation
+- GPT-4 powered responses
+- Follow-up questions
+- Expected answers
 ## Author
 
 Hemabushan K
