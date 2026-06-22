@@ -159,8 +159,10 @@ export async function generateInterviewQuestions(params) {
   try {
     const completion = await openai.chat.completions.create({
   model: "gpt-4o-mini",
-  max_tokens: 800,
+  max_tokens: 1500,
   temperature: 0.3,
+  response_format: { type: "json_object" },
+
   messages: [
     {
       role: "system",
@@ -176,9 +178,8 @@ export async function generateInterviewQuestions(params) {
     }
   ]
 })
-logger.info(
-  JSON.stringify(completion, null, 2).slice(0, 1000)
-)
+logger.info("RAW CONTENT:")
+logger.info(completion.choices?.[0]?.message?.content?.slice(0, 2000))
 
     rawContent = completion.choices[0]?.message?.content ?? ''
     const generationMs = Date.now() - startTime
