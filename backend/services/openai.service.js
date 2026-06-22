@@ -158,7 +158,7 @@ export async function generateInterviewQuestions(params) {
 
   try {
     const completion = await openai.chat.completions.create({
-      model: env.OPENAI_MODEL,
+      model: "gpt-4o-mini",
       max_tokens: env.OPENAI_MAX_TOKENS,
       temperature: env.OPENAI_TEMPERATURE,
     //response_format: { type: 'json_object' }, // GPT-4o + gpt-4-turbo support this
