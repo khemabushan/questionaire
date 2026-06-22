@@ -161,7 +161,7 @@ export async function generateInterviewQuestions(params) {
       model: env.OPENAI_MODEL,
       max_tokens: env.OPENAI_MAX_TOKENS,
       temperature: env.OPENAI_TEMPERATURE,
-      response_format: { type: 'json_object' }, // GPT-4o + gpt-4-turbo support this
+    //response_format: { type: 'json_object' }, // GPT-4o + gpt-4-turbo support this
       messages: [
         { role: 'system', content: buildSystemPrompt() },
         { role: 'user', content: buildUserPrompt({ jobRole, experienceLevel, difficultyLevel }) },
