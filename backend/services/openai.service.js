@@ -49,9 +49,9 @@ EXPERIENCE LEVEL: ${experienceLevel} — ${levelContext[normalizedLevel] ?? ''}
 DIFFICULTY: ${difficultyLevel} — ${difficultyContext[normalizedDifficulty] ?? ''}
 
 Produce EXACTLY:
-- 10 technical questions specific to the "${jobRole}" role
-- 5 behavioral questions (STAR-method compatible)
-- 5 HR questions (culture fit, motivation, expectations)
+- 3 technical questions specific to the "${jobRole}" role
+- 2 behavioral questions (STAR-method compatible)
+- 1 HR question (culture fit, motivation, expectations)
 
 For EVERY technical question, include 3 follow-up probes.
 For behavioral and HR questions, followUpQuestions must be an empty array [].
@@ -86,7 +86,7 @@ Return this EXACT JSON structure (no other text):
   ]
 }
 
-Order: technical questions 1–10, behavioral 11–15, HR 16–20.`
+Order: technical questions 1–3, behavioral 4–5, HR 6.`
 }
 
 // ── Response validator ────────────────────────────────────────────────────
