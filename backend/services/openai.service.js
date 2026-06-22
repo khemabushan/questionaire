@@ -158,15 +158,14 @@ export async function generateInterviewQuestions(params) {
 
   try {
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      max_tokens: env.OPENAI_MAX_TOKENS,
-      temperature: env.OPENAI_TEMPERATURE,
-    //response_format: { type: 'json_object' }, // GPT-4o + gpt-4-turbo support this
-      messages: [
-        { role: 'system', content: buildSystemPrompt() },
-        { role: 'user', content: buildUserPrompt({ jobRole, experienceLevel, difficultyLevel }) },
-      ],
-    })
+    model: "gpt-4o-mini",
+    max_tokens: 1500,
+    temperature: env.OPENAI_TEMPERATURE,
+    messages: [
+      { role: "system", content: buildSystemPrompt() },
+      { role: "user", content: buildUserPrompt({...}) }
+    ]
+  })
 
     rawContent = completion.choices[0]?.message?.content ?? ''
     const generationMs = Date.now() - startTime
